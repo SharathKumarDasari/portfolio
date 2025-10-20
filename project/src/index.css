@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-8 relative inline-block;
+  }
+  
+  .section-title::after {
+    @apply content-[''] absolute -bottom-2 left-0 h-1 w-16 bg-primary-500 rounded-full;
+  }
+
+  .animate-on-scroll {
+    @apply opacity-0;
+  }
+  
+  .animate-on-scroll.active {
+    @apply animate-fadeIn;
+  }
+}
