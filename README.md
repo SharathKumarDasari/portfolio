@@ -32,8 +32,8 @@ Before running this project, make sure you have the following installed:
 
 1. **Clone the repository**
    ```bash
-   git clone <your-repository-url>
-   cd portfolio-website
+   git clone https://github.com/SharathKumarDasari/portfolio.git
+   cd project
    ```
 
 2. **Install dependencies**
@@ -189,16 +189,4 @@ This project is open source and available under the [MIT License](LICENSE).
 - **Vite** - Fast build tool
 - **Pexels** - Stock photos for project placeholders
 
-## 📞 Support
 
-If you have any questions or need help customizing the portfolio, feel free to reach out:
-
-- Email: your.email@example.com
-- LinkedIn: [Your LinkedIn Profile]
-- GitHub: [Your GitHub Profile]
-
----
-
-**Made with ❤️ by a CSE Student**
-
-*This portfolio template is perfect for computer science students looking to showcase their skills and projects in a professional manner.*
