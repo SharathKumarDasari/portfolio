@@ -7,8 +7,11 @@ import { projects } from '../../data/projects';
 const Projects: React.FC = () => {
   const [visibleProjects, setVisibleProjects] = useState(4);
 
+  // const loadMoreProjects = () => {
+  //   setVisibleProjects(projects.length);
+  // };
   const loadMoreProjects = () => {
-    setVisibleProjects(projects.length);
+    setVisibleProjects((prev) => prev + 3);
   };
 
   return (
@@ -23,7 +26,8 @@ const Projects: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.slice(0, visibleProjects).map((project) => (
-            <div key={project.id} className="animate-on-scroll">
+            // <div key={project.id} className="animate-on-scroll">
+            <div key={project.id}>
               <Card hover>
                 <div className="relative h-60 overflow-hidden">
                   <img 
@@ -80,7 +84,7 @@ const Projects: React.FC = () => {
           ))}
         </div>
 
-        {visibleProjects < projects.length && (
+        {visibleProjects < projects.length &&  (
           <div className="text-center mt-12">
             <button
               onClick={loadMoreProjects}
