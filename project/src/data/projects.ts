@@ -30,7 +30,7 @@ export const projects: Project[] = [
     id: 2,
     title: 'Arogya AI',
     description:'Arogya AI is a comprehensive healthcare triage application with multilingual support and WhatsApp integration.',
-    technologies: ['React', 'Python', 'JavaScript' ,'TypeScript', 'MongoDB'],
+    technologies: ['React', 'NodeJs' ,'TypeScript', 'Python' , 'MongoDB',],
     imageUrl: arogya_ai,
     demoUrl: 'https://arogya-ai-liard.vercel.app/',
     codeUrl: 'https://github.com/SharathKumarDasari/arogya_ai',
