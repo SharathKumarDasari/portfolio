@@ -1,4 +1,5 @@
 import React from 'react';
+import salesforce from '../../data/salesforce.jpg';
 import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
 import Button from '../ui/Button';
 import Container from '../ui/Container';
@@ -66,7 +67,7 @@ const Hero: React.FC = () => {
             <div className="relative animate-on-scroll">
               <div className="rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-xl w-96 h-96 mx-auto">
                 <img 
-                  src="#"
+                  src={salesforce}
                   alt="Profile" 
                   className="w-full h-full object-cover"
                 />
