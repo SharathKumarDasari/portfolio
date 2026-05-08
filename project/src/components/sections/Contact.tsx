@@ -4,6 +4,7 @@ import Container from '../ui/Container';
 import Button from '../ui/Button';
 import { socialLinks } from '../../data/skills';
 import * as LucideIcons from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -13,24 +14,98 @@ const Contact: React.FC = () => {
     message: '',
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+  // const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  //   const { name, value } = e.target;
+  //   setFormData(prev => ({ ...prev, [name]: value }));
+  // };
+
+  // const handleChange = async (e: React.FormEvent) => {
+  //   e.preventDefault();
+
+  //   try {
+      
+  //     await emailjs.send(
+  //       import.meta.env.VITE_EMAILJS_SERVICE_ID,
+  //       import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+  //       {
+  //         name: formData.name,
+  //         email: formData.email,
+  //         subject: formData.subject,
+  //         message: formData.message,
+  //       },
+  //       import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+  //     );
+
+  //     alert('Message sent successfully!');
+
+  //     setFormData({
+  //       name: '',
+  //       email: '',
+  //       subject: '',
+  //       message: '',
+  //     });
+
+  //   } catch (error) {
+  //     console.error(error);
+  //     alert('Failed to send message');
+  //   }
+  // };
+
+    const handleChange = (
+      e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    ) => {
+      const { name, value } = e.target;
+
+      setFormData((prev) => ({
+        ...prev,
+        [name]: value,
+      }));
+    };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    try {
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        {
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        },
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
+
+      alert('Message sent successfully!');
+
+      setFormData({
+        name: '',
+        email: '',
+        subject: '',
+        message: '',
+      });
+
+    } catch (error) {
+      console.error(error);
+      alert('Failed to send message');
+    }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // In a real application, you would send this data to your backend
-    console.log('Form submitted:', formData);
-    // Reset form fields
-    setFormData({
-      name: '',
-      email: '',
-      subject: '',
-      message: '',
-    });
-    alert('Thank you for your message! I will get back to you soon.');
-  };
+  // const handleSubmit = (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   // In a real application, you would send this data to your backend
+  //   console.log('Form submitted:', formData);
+  //   // Reset form fields
+  //   setFormData({
+  //     name: '',
+  //     email: '',
+  //     subject: '',
+  //     message: '',
+  //   });
+  //   alert('Thank you for your message! I will get back to you soon.');
+  // };
 
   return (
     <section id="contact" className="py-20 bg-gray-50 dark:bg-gray-950">
