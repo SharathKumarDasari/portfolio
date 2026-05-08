@@ -59,7 +59,7 @@ const Footer: React.FC = () => {
               <li>
                 <span className="block">Email:</span>
                 <a 
-                  href="mailto:your.email@example.com" 
+                  href="mailto:sharathdasari1719@gmail.com" 
                   className="text-primary-500 hover:underline"
                 >
                   sharathdasari1719@gmail.com
