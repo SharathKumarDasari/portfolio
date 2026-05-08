@@ -96,12 +96,12 @@ export const skills: Skill[] = [
 export const socialLinks: SocialLink[] = [
   {
     name: 'GitHub',
-    url: 'https://github.com',
+    url: 'https://github.com/SharathKumarDasari/',
     icon: 'Github',
   },
   {
     name: 'LinkedIn',
-    url: 'https://linkedin.com',
+    url: 'https://www.linkedin.com/in/dasari-sharath-kumar/',
     icon: 'Linkedin',
   },
   {
@@ -111,7 +111,7 @@ export const socialLinks: SocialLink[] = [
   },
   {
     name: 'Email',
-    url: 'mailto:your.email@example.com',
+    url: 'mailto:sharathdasari1719@gmail.com',
     icon: 'Mail',
   },
 ];

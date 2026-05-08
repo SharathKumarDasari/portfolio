@@ -60,7 +60,7 @@ const Contact: React.FC = () => {
                   <div>
                     <span className="block text-sm text-gray-600 dark:text-gray-400">Email</span>
                     <a 
-                      href="mailto:your.email@example.com" 
+                      href="mailto:sharathdasari1719@gmail.com" 
                       className="text-gray-900 dark:text-white font-medium hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
                     >
                       sharathdasari1719@gmail.com
@@ -89,7 +89,7 @@ const Contact: React.FC = () => {
                   <div>
                     <span className="block text-sm text-gray-600 dark:text-gray-400">Phone</span>
                     <a 
-                      href="tel:+1234567890" 
+                      href="tel:+918897742519" 
                       className="text-gray-900 dark:text-white font-medium hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
                     >
                       +91 8897742519
